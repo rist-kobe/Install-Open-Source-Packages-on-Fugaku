@@ -1,0 +1,43 @@
+&share
+wrf_core = 'ARW'
+max_dom = 1,
+start_date = '2016-10-06_00:00:00',
+end_date = '2016-10-08_00:00:00',
+interval_seconds = 21600,
+io_form_geogrid = 2,
+active_grid = .true.,
+/
+
+&geogrid
+parent_id = 1,
+parent_grid_ratio = 1,
+i_parent_start = 1,
+j_parent_start = 1,
+e_we = 91,
+e_sn = 100,
+geog_data_res = 'default',
+dx = 27000,
+dy = 27000,
+map_proj = 'mercator',
+ref_lat = 28.00,
+ref_lon = -79.00,
+truelat1 = 30.0,
+truelat2 = 60.0,
+stand_lon = -79.0,
+geog_data_path = '../WPS_GEOG',
+!opt_geogrid_tbl_path = '/glade/work/wrfhelp/shared_tables/GEOGRID.TBL',
+!opt_output_from_geogrid_path = '/glade/work/wrfhelp/my_output/',
+/
+
+&ungrib
+out_format = 'WPS',
+prefix = 'FILE',
+/
+
+&metgrid
+fg_name = 'FILE',
+!constants_name = '/glade/work/wrfhelp/input_data/constant_file',
+io_form_metgrid = 2,
+!opt_metgrid_tbl_path = '/glade/work/wrfhelp/shared_tables/METGRID.TBL',
+!opt_output_from_metgrid_path = '/glade/work/wrfhelp/my_output/',
+/

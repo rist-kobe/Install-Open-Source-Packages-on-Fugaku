@@ -1,0 +1,54 @@
+--- configure.defaults.orig	2024-01-26 11:09:39.000000000 +0900
++++ configure.defaults	2024-01-26 11:33:27.000000000 +0900
+@@ -52,35 +52,35 @@
+ OMPCPP          =       # -D_OPENMP
+ OMP             =       # -fopenmp
+ OMPCC           =       # -fopenmp
+-SFC             =       gfortran
+-SCC             =       gcc
+-CCOMP           =       gcc
+-DM_FC           =       mpif90 -f90=$(SFC)
+-DM_CC           =       mpicc -cc=$(SCC)
+-FC              =       CONFIGURE_FC
+-CC              =       CONFIGURE_CC
++SFC             =       frt
++SCC             =       fcc -Nclang -ffj-lst=t
++CCOMP           =       fcc -Nclang -ffj-lst=t
++DM_FC           =       mpifrt
++DM_CC           =       mpifcc -Nclang -ffj-lst=t
++FC              =       mpifrt
++CC              =       mpifcc -Nclang -ffj-lst=t
+ LD              =       $(FC)
+ RWORDSIZE       =       CONFIGURE_RWORDSIZE
+ PROMOTION       =       #-fdefault-real-8
+-ARCH_LOCAL      =       -DNONSTANDARD_SYSTEM_SUBR  CONFIGURE_D_CTSM
+-CFLAGS_LOCAL    =       -w -O3 -c  # -DRSL0_ONLY
+-LDFLAGS_LOCAL   =
++ARCH_LOCAL      =       #-DNONSTANDARD_SYSTEM_SUBR  CONFIGURE_D_CTSM
++CFLAGS_LOCAL    =       -w -O2 -c
++LDFLAGS_LOCAL   =       
+ CPLUSPLUSLIB    =       
+ ESMF_LDFLAG     =       $(CPLUSPLUSLIB)
+-FCOPTIM         =       -O2 -ftree-vectorize -funroll-loops
++FCOPTIM         =       -Kfast,fp_precision -Koptmsg=2 -Nlst=t
+ FCREDUCEDOPT	=       $(FCOPTIM)
+-FCNOOPT         =       -O0
++FCNOOPT         =       -O0 -Koptmsg=2 -Nlst=t
+ FCDEBUG         =       # -g $(FCNOOPT)  # -fbacktrace -ggdb -fcheck=bounds,do,mem,pointer -ffpe-trap=invalid,zero,overflow
+-FORMAT_FIXED    =       -ffixed-form
+-FORMAT_FREE     =       -ffree-form -ffree-line-length-none
++FORMAT_FIXED    =       -Fixed #-ffixed-form
++FORMAT_FREE     =       -Free #-ffree-form -ffree-line-length-none
+ FCSUFFIX        =       
+ FCCOMPAT        =       
+-BYTESWAPIO      =       -fconvert=big-endian -frecord-marker=4
++BYTESWAPIO      =       #-fconvert=big-endian -frecord-marker=4
+ FCBASEOPTS_NO_G =       -w $(FORMAT_FREE) $(BYTESWAPIO) $(FCCOMPAT)
+ FCBASEOPTS      =       $(FCBASEOPTS_NO_G) $(FCDEBUG)
+ MODULE_SRCH_FLAG =
+ TRADFLAG        =      CONFIGURE_TRADFLAG
+-CPP             =      /lib/cpp CONFIGURE_CPPFLAGS
++CPP             =      cpp CONFIGURE_CPPFLAGS
+ AR              =      ar
+ ARFLAGS         =      ru
+ M4              =      m4 -B 14000
