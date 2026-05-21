@@ -1,0 +1,19 @@
+name: 投稿 / Issue
+description: 不具合のご指摘やご提案などはこちら / Create a report or proposal
+title: "[Issue]: "
+body:
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容 / Content
+      description: 不具合やご提案の内容などを記述してください。 / Please describe your issues or suggestions.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 同意事項 / Agreement
+      options:
+        - label: 本リポジトリのCONTRIBUTING.mdに記載された条件（RIST（その承継人、日本国政府を含む）へのライセンス付与、著作者人格権の不行使等）に同意します。 / I agree to the terms described in CONTRIBUTING.md of this repository, including granting a license to RIST (including its successors and the Government of Japan) and agreeing to the non-assertion of moral rights.
+          required: true
