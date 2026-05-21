@@ -4,7 +4,7 @@
 
 All resources in this repository are licensed under the terms specified in the [LICENSE](./LICENSE) file.
 
-**We are not accepting　pull requests.**
+**We are not accepting pull requests.**
 
 ---
 
