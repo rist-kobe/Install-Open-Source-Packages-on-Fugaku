@@ -1,4 +1,4 @@
-# HPCプログラミングセミナーへの貢献について / Contributing to HPC Programming Seminar
+# オープンソースソフトウェア（OSS）をスーパーコンピュータ「富岳」で利用する手順の公開への貢献について / Contributing to share detailed instructions for installing open-source software packages on the supercomputer Fugaku.
 **Copyright (c) 2026 一般財団法人 高度情報科学技術研究機構 (Research Organization for Information Science and Technology, RIST)**
 
 > [!IMPORTANT]
@@ -8,13 +8,13 @@
 >
 > **This repository does not accept Pull Requests.** Please submit feedback via the **Issues**.
 
-HPCプログラミングセミナーへの貢献に関心をお寄せいただきありがとうございます。
+オープンソースソフトウェア（OSS）をスーパーコンピュータ「富岳」で利用する手順の公開への貢献に関心をお寄せいただきありがとうございます。
 
-Thank you for your interest in contributing to the **HPC Programming Seminar**.
+Thank you for your interest in contributing to share detailed instructions for installing open-source software packages on the supercomputer Fugaku.
 
 ---
 
-## 本セミナーについて / About This Seminar
+## 本リポジトリについて / About This Repository
 
 詳しくは README.md および LICENSE を参照してください。
 
@@ -26,7 +26,7 @@ Please see README.md and LICENSE for details.
 
 **既存資料の著作権 / Copyright in Existing Materials** 
 
-本リポジトリに含まれる講義資料・サンプルコードの著作権は、 RISTに帰属します。これらは日本国法上の **職務著作** として作成されるものであり、第三者に著作権は移転しません。法令に基づき承継人が指定された場合には、その承継人に著作権が承継されます。承継人として日本国政府が指定された場合には、日本国政府に承継されます。  
+本リポジトリに含まれる説明資料・サンプルコードの著作権は、 RISTに帰属します。これらは日本国法上の **職務著作** として作成されるものであり、第三者に著作権は移転しません。法令に基づき承継人が指定された場合には、その承継人に著作権が承継されます。承継人として日本国政府が指定された場合には、日本国政府に承継されます。  
 
 All lecture materials and sample code included in this repository are owned by RIST. These materials are created by RIST employees in the course of their duties ("Shokumu Chosaku"). Under the Copyright Act of Japan, the copyright is vested in RIST. No copyright is transferred to any third party. If a successor organization is designated pursuant to applicable law, copyright shall be transferred to such successor. If the Government of Japan is designated as such successor, the copyright is transferred to the Government of Japan.
 
@@ -193,4 +193,4 @@ RIST (including its successors) may update these terms with reasonable notice. U
 
 For questions or matters containing confidential information that cannot be posted on the **Issues** , please contact the Secretariat [ hpc-seminar[-at-]rist.or.jp (Please replace "[-at-]" with "@") ].
 
-**最終更新日 / Last Updated**: 2026‑01‑15
+**最終更新日 / Last Updated**: 2026‑05‑25
