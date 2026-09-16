@@ -23,7 +23,7 @@ Some documents include Fugaku-specific commands and settings. For details, pleas
 
 ## Packages Covered:
 - AlignTK
-- GROMACS
+- [GROMACS](./GROMACS/README.md)
 - OpenFOAM
 - OpenFold
 - Wannier90

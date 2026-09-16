@@ -1,0 +1,34 @@
+--- gmxtest.pl.org	2024-11-04 21:00:20.000000000 +0900
++++ gmxtest.pl	2026-09-09 16:16:39.000000000 +0900
+@@ -68,6 +68,7 @@
+ my $mpirun    = 'mpirun';
+ my $parse_cmd = '';
+ my $gmx_cmd   = "gmx";
++my $gmx_cmd2  = "gmx_mpi";
+ my %progs = ( 'grompp'   => '',
+               'mdrun'    => '',
+               'pdb2gmx'  => '',
+@@ -169,14 +170,21 @@
+ 	    $mdprefix = sub { "$mpirun -n $_[0]" };
+ 	} else {
+ 	    # edit the next line if you need to customize the call to mpirun
+-	    $mdprefix = sub { "$mpirun -np $_[0] -wdir " . getcwd() };
++	    #$mdprefix = sub { "$mpirun -np $_[0] -wdir " . getcwd() };
++	    $mdprefix = sub { "$mpirun -np $_[0]" };
+ 	}
+     }
+     if ($autosuffix && ( $double > 0)) {
+         $gmx_cmd .= "_d";
+     }
+     foreach my $prog ( keys %progs ) {
+-        $progs{$prog} = "$gmx_cmd$suffix $prog";
++	    #$progs{$prog} = "$gmx_cmd$suffix $prog";
++       if ( $prog eq "mdrun" )
++       {
++	       $progs{$prog} = "$gmx_cmd2$suffix $prog";
++       } else {
++	       $progs{$prog} = "$gmx_cmd$suffix $prog";
++       }
+     }
+     $ref = 'reference_' . ($double > 0 ? 'd' : 's');
+ 
